@@ -1,0 +1,10 @@
+name: E5_defense
+models: ["google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5"]
+n: 40
+seed_base: 5000
+steps:
+  - {kind: operator, op: slip, secret_id: p1}
+  - {kind: operator, op: provenance}
+  - {kind: probe, op: plain, secret_id: p2}
+  - {kind: probe, op: plain, secret_id: p3}
+  - {kind: probe, op: plain, secret_id: p4}

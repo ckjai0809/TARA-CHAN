@@ -1,0 +1,12 @@
+name: belief_epistemic_decimals
+scenario: belief_epistemic
+system_template: target_system_belief.j2
+target_models: [google/gemini-3-flash-preview, anthropic/claude-haiku-4.5]
+judge_model: openai/gpt-4o-mini
+secret_id: belief_decimals
+directive: neutral
+temperature: 0.7
+seed_base: 17000
+max_ask_turns: 3
+concurrency: 6
+cells: [{bond: B0, status: S0, n: 5}]

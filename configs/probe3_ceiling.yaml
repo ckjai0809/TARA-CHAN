@@ -1,0 +1,16 @@
+name: probe3_ceiling
+target_models:
+  - google/gemini-3-flash-preview
+  - anthropic/claude-haiku-4.5
+judge_model: openai/gpt-4o-mini
+secret_id: draft_forecast
+directive: medium
+temperature: 0.7
+seed_base: 9000
+max_reply_tokens: 400
+max_ask_turns: 3
+concurrency: 6
+asker_name: Quill
+cells:
+  - {bond: B0, status: ceiling, n: 5}
+  - {bond: B1, status: ceiling, n: 5}

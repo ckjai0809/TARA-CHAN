@@ -1,0 +1,10 @@
+name: E1_control
+models: ["google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5"]
+n: 40
+seed_base: 2500
+steps:
+  - {kind: probe, op: plain, secret_id: p2}
+  - {kind: probe, op: plain, secret_id: p3}
+  - {kind: probe, op: plain, secret_id: p4}
+  - {kind: probe, op: plain, secret_id: p5}
+  - {kind: probe, op: plain, secret_id: p6}

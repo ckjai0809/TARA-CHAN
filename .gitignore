@@ -1,0 +1,26 @@
+# Secrets — NEVER commit
+.env
+*.key
+keys.yaml
+
+# Results (data artifacts; keep dirs, ignore bulk)
+results/runs/*.jsonl
+results/scores/*.jsonl
+results/figures/*.png
+results/figures/*.svg
+results/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
