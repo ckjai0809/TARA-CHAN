@@ -3,12 +3,8 @@
 *.key
 keys.yaml
 
-# Results (data artifacts; keep dirs, ignore bulk)
-results/runs/*.jsonl
-results/scores/*.jsonl
-results/figures/*.png
-results/figures/*.svg
-results/*.csv
+# Results — shared with the team (runs, scores, figures are committed).
+# Total is only ~7MB; teammates need these to verify/reproduce.
 
 # Python
 __pycache__/
