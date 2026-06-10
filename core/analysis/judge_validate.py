@@ -57,7 +57,7 @@ def main() -> None:
     rng = random.Random(SEED)
     by_class = defaultdict(list)
     for r in rows:
-        if r.get("raw"):
+        if r.get("raw") and r.get("outcome"):
             by_class[r["outcome"]].append(r)
     sample = []
     for cls, rs in by_class.items():
