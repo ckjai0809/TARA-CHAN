@@ -14,7 +14,7 @@ from harness.discrimination import POLICIES  # noqa: E402
 from harness.jsonlio import read_jsonl  # noqa: E402
 from harness.state import _wilson  # noqa: E402
 
-RUN = ROOT / "upgraded_version" / "results" / "runs" / "discrimination.jsonl"
+RUN = ROOT / "core" / "data" / "discrimination.jsonl"
 
 
 def _act(rows, model, policy, condition):

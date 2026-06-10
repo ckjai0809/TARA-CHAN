@@ -9,14 +9,14 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from harness.alarm_stats import comply_rate, escalation_share, share_contrast, verdict  # noqa: E402
 from harness.escalation import EMOTION_BASES, INTENSITIES  # noqa: E402
 from harness.jsonlio import read_jsonl  # noqa: E402
 
-RUN = ROOT / "results" / "runs" / "alarm_silencer.jsonl"
+RUN = ROOT / "core" / "data" / "alarm_silencer.jsonl"
 DISPLAY = ["cold", "neutral_urgent"] + [f"{e}_{i}" for e in EMOTION_BASES for i in INTENSITIES]
 
 

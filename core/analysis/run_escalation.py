@@ -2,7 +2,7 @@
 requests, does the agent take the action / decline / ESCALATE? Across 3 affordance arms
 (free / channel / duty), 4 forbidden-action scenarios, 4 models.
 
-Writes one row per (model, scenario, arm, condition, rep) to results/runs/escalation.jsonl.
+Writes one row per (model, scenario, arm, condition, rep) to core/data/escalation.jsonl.
 A lock serializes writes so concurrent appends cannot interleave.
 """
 from __future__ import annotations
@@ -12,7 +12,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from harness import escalation as E  # noqa: E402
@@ -21,7 +21,7 @@ from harness.cost import BudgetExceededError  # noqa: E402
 from harness.jsonlio import append_jsonl  # noqa: E402
 from harness.openrouter import OpenRouterClient  # noqa: E402
 
-OUT = ROOT / "results" / "runs" / "escalation.jsonl"
+OUT = ROOT / "core" / "data" / "escalation.jsonl"
 MODELS = [
     "google/gemini-3-flash-preview",
     "anthropic/claude-haiku-4.5",

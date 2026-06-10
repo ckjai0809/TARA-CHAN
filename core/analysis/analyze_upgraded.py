@@ -13,7 +13,7 @@ from harness.alarm_stats import comply_rate, escalation_share, share_contrast  #
 from harness.escalation import EMOTION_BASES, INTENSITIES  # noqa: E402
 from harness.jsonlio import read_jsonl  # noqa: E402
 
-RUNS = ROOT / "upgraded_version" / "results" / "runs"
+RUNS = ROOT / "core" / "data"
 ESC = RUNS / "escalation_upgraded.jsonl"
 ALARM = RUNS / "alarm_upgraded.jsonl"
 

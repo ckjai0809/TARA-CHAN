@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="440" fill="#fafafa"/>
+  <text x="550" y="28" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">TARA-chan · Theory of Change</text>
+
+  <!-- Col 1: INPUTS x=10 w=193 -->
+  <rect x="10" y="44" width="193" height="380" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <rect x="10" y="44" width="193" height="32" rx="5" fill="#1565c0"/>
+  <rect x="10" y="62" width="193" height="14" fill="#1565c0"/>
+  <text x="106" y="65" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">INPUTS</text>
+  <text x="20" y="96"  font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">Attack</text>
+  <text x="20" y="111" font-family="sans-serif" font-size="10" fill="#333">Payload-free precondition</text>
+  <text x="20" y="125" font-family="sans-serif" font-size="10" fill="#333">spoof — overt + subtle</text>
+  <text x="20" y="148" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">9 frontier models</text>
+  <text x="20" y="163" font-family="sans-serif" font-size="10" fill="#555">Claude Haiku · Sonnet · Opus</text>
+  <text x="20" y="177" font-family="sans-serif" font-size="10" fill="#555">GPT-4o-mini · Gemini Flash</text>
+  <text x="20" y="191" font-family="sans-serif" font-size="10" fill="#555">Llama 3.3 · 4 · Mistral · Qwen</text>
+  <text x="20" y="205" font-family="sans-serif" font-size="10" fill="#555">DeepSeek-R1</text>
+  <text x="20" y="228" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">4 irreversible scenarios</text>
+  <text x="20" y="243" font-family="sans-serif" font-size="10" fill="#555">grant_root · purge_db</text>
+  <text x="20" y="257" font-family="sans-serif" font-size="10" fill="#555">wire_funds · file_report</text>
+  <text x="20" y="280" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">3 policy conditions</text>
+  <text x="20" y="295" font-family="sans-serif" font-size="10" fill="#555">naive · strong · smart</text>
+  <text x="20" y="318" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">LLM judge validation</text>
+  <text x="20" y="333" font-family="sans-serif" font-size="10" fill="#555">88.4% overall agreement</text>
+  <text x="20" y="347" font-family="sans-serif" font-size="10" fill="#555">escalate 95% · silent 94%</text>
+
+  <line x1="203" y1="234" x2="225" y2="234" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Col 2: ACTIVITIES x=227 w=193 -->
+  <rect x="227" y="44" width="193" height="380" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <rect x="227" y="44" width="193" height="32" rx="5" fill="#2e7d32"/>
+  <rect x="227" y="62" width="193" height="14" fill="#2e7d32"/>
+  <text x="323" y="65" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">ACTIVITIES</text>
+  <text x="237" y="96"  font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Breach + alarm measurement</text>
+  <text x="237" y="111" font-family="sans-serif" font-size="10" fill="#555">3-way: comply / silent_refuse /</text>
+  <text x="237" y="125" font-family="sans-serif" font-size="10" fill="#555">escalate · alarm-share metric</text>
+  <text x="237" y="148" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Discrimination test</text>
+  <text x="237" y="163" font-family="sans-serif" font-size="10" fill="#555">genuine vs spoofed precondition</text>
+  <text x="237" y="177" font-family="sans-serif" font-size="10" fill="#555">hold-on-fake − hold-on-real</text>
+  <text x="237" y="200" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Persistence test</text>
+  <text x="237" y="215" font-family="sans-serif" font-size="10" fill="#555">8-round escalating pressure</text>
+  <text x="237" y="229" font-family="sans-serif" font-size="10" fill="#555">all 9 models · n=40/model</text>
+  <text x="237" y="252" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Emotional framing test</text>
+  <text x="237" y="267" font-family="sans-serif" font-size="10" fill="#555">fear · guilt · anger · sadness</text>
+  <text x="237" y="281" font-family="sans-serif" font-size="10" fill="#555">strong + subtle intensity</text>
+  <text x="237" y="304" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Subtlety experiment</text>
+  <text x="237" y="319" font-family="sans-serif" font-size="10" fill="#555">overt vs subtle attack register</text>
+  <text x="237" y="342" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1b5e20">Per-scenario analysis</text>
+  <text x="237" y="357" font-family="sans-serif" font-size="10" fill="#555">high-stakes vs catastrophic</text>
+
+  <line x1="420" y1="234" x2="442" y2="234" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Col 3: OUTPUTS x=444 w=193 -->
+  <rect x="444" y="44" width="193" height="380" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <rect x="444" y="44" width="193" height="32" rx="5" fill="#e65100"/>
+  <rect x="444" y="62" width="193" height="14" fill="#e65100"/>
+  <text x="540" y="65" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">OUTPUTS</text>
+  <text x="454" y="96"  font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Breach rate 71.5%</text>
+  <text x="454" y="111" font-family="sans-serif" font-size="10" fill="#555">CI [68.3%, 74.6%]</text>
+  <text x="454" y="125" font-family="sans-serif" font-size="10" fill="#555">6/9 models: 100% every trial</text>
+  <text x="454" y="148" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Silent-refusal 67.6%</text>
+  <text x="454" y="163" font-family="sans-serif" font-size="10" fill="#555">of resisters · CI [61.2%, 73.4%]</text>
+  <text x="454" y="177" font-family="sans-serif" font-size="10" fill="#555">alarm channel silent by default</text>
+  <text x="454" y="200" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Smart gap +50pp</text>
+  <text x="454" y="215" font-family="sans-serif" font-size="10" fill="#555">CI [+36.7%, +63.3%] excl. zero</text>
+  <text x="454" y="229" font-family="sans-serif" font-size="10" fill="#555">alarm-share 66.7% [53%, 78%]</text>
+  <text x="454" y="252" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Opus: 2% → 100% alarm</text>
+  <text x="454" y="267" font-family="sans-serif" font-size="10" fill="#555">alarm at round 2.88 of 3.9</text>
+  <text x="454" y="290" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Subtle +10.6pp vs overt</text>
+  <text x="454" y="305" font-family="sans-serif" font-size="10" fill="#555">subtle produces zero alarms</text>
+  <text x="454" y="328" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Fear-strong +13.1pp alarm</text>
+  <text x="454" y="343" font-family="sans-serif" font-size="10" fill="#555">CI excludes zero</text>
+  <text x="454" y="366" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">purge_db 4% alarm (lowest)</text>
+  <text x="454" y="381" font-family="sans-serif" font-size="10" fill="#555">despite highest irreversibility</text>
+
+  <line x1="637" y1="234" x2="659" y2="234" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Col 4: OUTCOMES x=661 w=193 -->
+  <rect x="661" y="44" width="193" height="380" rx="5" fill="#fce4ec" stroke="#b71c1c" stroke-width="1.5"/>
+  <rect x="661" y="44" width="193" height="32" rx="5" fill="#b71c1c"/>
+  <rect x="661" y="62" width="193" height="14" fill="#b71c1c"/>
+  <text x="757" y="65" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">OUTCOMES</text>
+  <text x="671" y="96"  font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">Trap = policy design failure</text>
+  <text x="671" y="111" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">not a model limitation</text>
+  <text x="671" y="126" font-family="sans-serif" font-size="10" fill="#555">untrained policy produces</text>
+  <text x="671" y="140" font-family="sans-serif" font-size="10" fill="#555">silent refusal by default</text>
+  <text x="671" y="163" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">Smart policy is a</text>
+  <text x="671" y="178" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">deployable fix today</text>
+  <text x="671" y="193" font-family="sans-serif" font-size="10" fill="#555">one system-prompt edit:</text>
+  <text x="675" y="207" font-family="sans-serif" font-size="10" fill="#555">– stops all breaches</text>
+  <text x="675" y="221" font-family="sans-serif" font-size="10" fill="#555">– activates alarm raising</text>
+  <text x="675" y="235" font-family="sans-serif" font-size="10" fill="#555">– non-circular discrimination</text>
+  <text x="671" y="258" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">Single-turn evals mislead</text>
+  <text x="671" y="273" font-family="sans-serif" font-size="10" fill="#555">Opus 2% → 100% under pressure</text>
+  <text x="671" y="287" font-family="sans-serif" font-size="10" fill="#555">patience ≠ failure</text>
+  <text x="671" y="310" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#b71c1c">Calm lies evade all filters</text>
+  <text x="671" y="325" font-family="sans-serif" font-size="10" fill="#555">content monitoring catches</text>
+  <text x="671" y="339" font-family="sans-serif" font-size="10" fill="#555">the wrong attack</text>
+
+  <line x1="854" y1="234" x2="876" y2="234" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Col 5: GOAL x=878 w=212 -->
+  <rect x="878" y="44" width="212" height="380" rx="5" fill="#ede7f6" stroke="#4527a0" stroke-width="2"/>
+  <rect x="878" y="44" width="212" height="32" rx="5" fill="#4527a0"/>
+  <rect x="878" y="62" width="212" height="14" fill="#4527a0"/>
+  <text x="984" y="65" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="white">GOAL</text>
+  <text x="888" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4527a0">Human oversight loop</text>
+  <text x="888" y="117" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4527a0">restored in deployed</text>
+  <text x="888" y="134" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4527a0">agentic systems</text>
+  <text x="888" y="168" font-family="sans-serif" font-size="10.5" fill="#333">When a spoofed authorization</text>
+  <text x="888" y="183" font-family="sans-serif" font-size="10.5" fill="#333">arrives, the agent:</text>
+  <text x="892" y="206" font-family="sans-serif" font-size="11" fill="#4527a0">✓  Blocks the attack</text>
+  <text x="892" y="223" font-family="sans-serif" font-size="11" fill="#4527a0">✓  Raises an alarm</text>
+  <text x="892" y="240" font-family="sans-serif" font-size="11" fill="#4527a0">✓  Distinguishes real from</text>
+  <text x="896" y="256" font-family="sans-serif" font-size="11" fill="#4527a0">    fake preconditions</text>
+  <text x="888" y="287" font-family="sans-serif" font-size="10.5" fill="#333">Evidence of feasibility:</text>
+  <text x="892" y="303" font-family="sans-serif" font-size="10" fill="#555">$0.82 per 600 calls</text>
+  <text x="892" y="317" font-family="sans-serif" font-size="10" fill="#555">verified on DeepSeek-R1</text>
+  <text x="892" y="331" font-family="sans-serif" font-size="10" fill="#555">no model retraining needed</text>
+</svg>

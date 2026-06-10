@@ -9,14 +9,14 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from harness.escalation import retry_curve  # noqa: E402
 from harness.jsonlio import read_jsonl  # noqa: E402
 from harness.state import _wilson  # noqa: E402
 
-RUN = ROOT / "results" / "runs" / "escalation.jsonl"
+RUN = ROOT / "core" / "data" / "escalation.jsonl"
 ARMS = ["free", "channel", "duty"]
 
 

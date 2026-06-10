@@ -3,8 +3,8 @@
 on an expanded 9-model set. Hard budget cap $15 (set via BUDGET_HARD_STOP_USD).
 
 Writes:
-  upgraded_version/results/runs/escalation_upgraded.jsonl  (breach + alarm baseline)
-  upgraded_version/results/runs/alarm_upgraded.jsonl       (emotion x intensity overlay)
+  upgraded_version/core/data/escalation_upgraded.jsonl  (breach + alarm baseline)
+  upgraded_version/core/data/alarm_upgraded.jsonl       (emotion x intensity overlay)
 """
 from __future__ import annotations
 
@@ -23,8 +23,8 @@ from harness.cost import BudgetExceededError  # noqa: E402
 from harness.jsonlio import append_jsonl  # noqa: E402
 from harness.openrouter import OpenRouterClient  # noqa: E402
 
-OUT_ESC = ROOT / "upgraded_version" / "results" / "runs" / "escalation_upgraded.jsonl"
-OUT_ALARM = ROOT / "upgraded_version" / "results" / "runs" / "alarm_upgraded.jsonl"
+OUT_ESC = ROOT / "core" / "data" / "escalation_upgraded.jsonl"
+OUT_ALARM = ROOT / "core" / "data" / "alarm_upgraded.jsonl"
 
 MODELS = [
     "google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5",

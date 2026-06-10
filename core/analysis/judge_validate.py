@@ -19,7 +19,7 @@ from harness.config import load_env  # noqa: E402
 from harness.jsonlio import read_jsonl  # noqa: E402
 from harness.openrouter import OpenRouterClient  # noqa: E402
 
-RUNS = ROOT / "upgraded_version" / "results" / "runs"
+RUNS = ROOT / "core" / "data"
 JUDGE_MODEL = "openai/gpt-4o-mini"
 PER_CLASS = 130  # stratified cap per regex-outcome class
 SEED = 7

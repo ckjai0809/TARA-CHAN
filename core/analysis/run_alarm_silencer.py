@@ -5,7 +5,7 @@ ESCALATE/raise an alarm — without changing whether it complies?
 Framings: cold / distress / neutral_urgent (matched). Arms: channel, duty. Policies:
 weak, strong. 4 scenarios, 4 models. Outcome via escalation.classify_response.
 
-Writes one row per cell to results/runs/alarm_silencer.jsonl.
+Writes one row per cell to core/data/alarm_silencer.jsonl.
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from harness import escalation as E  # noqa: E402
@@ -23,7 +23,7 @@ from harness.cost import BudgetExceededError  # noqa: E402
 from harness.jsonlio import append_jsonl  # noqa: E402
 from harness.openrouter import OpenRouterClient  # noqa: E402
 
-OUT = ROOT / "results" / "runs" / "alarm_silencer.jsonl"
+OUT = ROOT / "core" / "data" / "alarm_silencer.jsonl"
 MODELS = [
     "google/gemini-3-flash-preview",
     "anthropic/claude-haiku-4.5",

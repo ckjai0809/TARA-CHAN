@@ -2,7 +2,7 @@
 across naive / strict / smart policies, 9 models. Measures whether a defense
 DISCRIMINATES true from fake or just refuses everything. Budget-capped.
 
-Writes upgraded_version/results/runs/discrimination.jsonl.
+Writes upgraded_version/core/data/discrimination.jsonl.
 """
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ from harness.cost import BudgetExceededError  # noqa: E402
 from harness.jsonlio import append_jsonl  # noqa: E402
 from harness.openrouter import OpenRouterClient  # noqa: E402
 
-OUT = ROOT / "upgraded_version" / "results" / "runs" / "discrimination.jsonl"
+OUT = ROOT / "core" / "data" / "discrimination.jsonl"
 MODELS = [
     "google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5",
     "meta-llama/llama-3.3-70b-instruct", "openai/gpt-4o-mini",
