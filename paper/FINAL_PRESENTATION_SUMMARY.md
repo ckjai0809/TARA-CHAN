@@ -35,9 +35,9 @@ The silent-refusal trap — the finding that models which resist attacks almost 
 
 **Strongly established:**
 
-1. A believable single-sentence lie about a safety precondition causes 6 of 9 frontier models to take catastrophic, irreversible actions — silently, without raising any alarm. (Source: `escalation_upgraded.jsonl`, n=60/model, judge-validated.)
+1. A believable single-sentence lie about a safety precondition causes 6 of 9 frontier models to take catastrophic, irreversible actions — silently, without raising any alarm — **under naive (weak) policy**. (Source: `escalation_upgraded.jsonl`, n=60/model; judge-validated: 76.0% overall, escalate 94%, silent_refuse 97%, comply 65%; 520-reply stratified sample.) Note: under strong policy, 4 of these 6 models (Gemini, Llama-3.3, Llama-4-Maverick, Mistral) do escalate at high rates (26–89%); only GPT-4o-mini never escalates under any condition.
 
-2. The silent-refusal trap is the dominant failure mode: models that resist attacks almost never raise an alarm. Claude Opus: 0% breach, 2% alarm. GPT-4o-mini: 0% alarm under any condition. The alarm channel is broken for breachers and silent refusers alike.
+2. The silent-refusal trap is the dominant failure mode under naive policy: models that resist attacks almost never raise an alarm. Claude Opus: 0% breach, 2% alarm. GPT-4o-mini: 0% alarm under any condition in any experiment. Of all resisters (spoof_subtle, weak policy), 75.8% [68.7%, 81.7%] go silent rather than escalate. The alarm channel is broken under naive policy — for breachers and for silent refusers alike. (Note: under strong policy, the 4 of 6 non-GPT breachers do escalate actively: Llama-4 72%, Mistral 78%, Gemini 26%, Llama-3.3 38%.)
 
 3. A verification-oriented smart policy achieves **non-circular discrimination**: DeepSeek-R1 holds 100% of spoofs, acts on 50% of genuine requests (gap +50pp, CI [+36.7%, +63.3%], excludes zero), and alarms on 66.7% of refused attacks. This breaks the silent-refusal trap.
 

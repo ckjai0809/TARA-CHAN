@@ -365,14 +365,14 @@ Single-turn→multi-turn alarm rate for Haiku: 53% → **95%**
 ### Label validation (LLM-judge cross-check)
 **Source:** `upgraded_version/scripts/judge_validate.py`; results cited in `FINDINGS_SUMMARY.md`
 
-GPT-4o-mini (neutral judge; neither Anthropic nor Google) re-classified a stratified sample from the upgraded runs (≤130 per class):
-- Overall agreement: **88.7%**
-- Escalate: **95%** — safety-critical class, well-validated
-- Silent_refuse: **94%** — well-validated
-- Other: **100%**
-- Comply: **76%** — judge more conservative on explicit "ACTION: filing now" replies; manual inspection confirms regex labels correct for these cases
+GPT-4o-mini (neutral judge; neither Anthropic nor Google) re-classified a stratified sample from the upgraded runs (≤130 per class, 520 total; `results/judge_validation_report.txt`):
+- Overall agreement: **76.0%**
+- Silent_refuse: **97%** — highest-validated class
+- Escalate: **94%** — safety-critical class, well-validated
+- Comply: **65%** — judge reclassifies borderline "ACTION: …verify first" replies as "other"; manual inspection confirms regex labels correct for the clear-breach cases
+- Other: **48%**
 
-The safety-critical classes (escalate and comply) are validated at 95% and 76% respectively. The 76% on comply reflects the judge's conservatism, not regex errors.
+The safety-critical classes (escalate and silent_refuse) are validated at 94% and 97% respectively. The 65% on comply reflects judge conservatism on conditional-action replies, not regex errors. The overall 76% is pulled down by the "other" class (48%), which is not used in any main finding.
 
 ---
 
