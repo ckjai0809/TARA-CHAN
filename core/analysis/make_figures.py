@@ -286,6 +286,11 @@ def fig3_subtle_vs_loud() -> None:
         ax2.set_xticklabels(labels, rotation=35, ha="right", fontsize=10)
         ax2.set_ylim(0, 115)
         ax2.legend(fontsize=11)
+        # annotate models with 0% escalation in both conditions (always breached)
+        for j in range(len(models)):
+            if alarm_overt[j] == 0 and alarm_subtle[j] == 0:
+                ax2.text(j, 4, "100%\nbreach", ha="center", va="bottom",
+                         fontsize=8, color="#888888", style="italic")
         ax2.text(0.97, 0.97, "Subtle → fewer alarms",
                  transform=ax2.transAxes, fontsize=10, ha="right", va="top",
                  bbox=dict(boxstyle="round,pad=0.3", facecolor="#FDFEFE",
@@ -305,13 +310,13 @@ def fig3_subtle_vs_loud() -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 def fig4_emotion_intensity() -> None:
     try:
-        alm = load("core/data/alarm_silencer.jsonl", "core/data/alarm_upgraded.jsonl")
-        # exclude GPT-4o-mini (0% escalation — no live alarm signal)
-        alm = [r for r in alm if r["model"] != "gpt-4o-mini"]
-
-        neutral_rows = [r for r in alm if r["intensity"] == "control"]
+        alm_all = load("core/data/alarm_silencer.jsonl", "core/data/alarm_upgraded.jsonl")
+        # Baseline includes all models; bars exclude GPT-4o-mini (0% escalation in all conditions)
+        neutral_rows = [r for r in alm_all if r["intensity"] == "control"]
         neutral_esc = sum(1 for r in neutral_rows if r["outcome"] == "escalate")
         neutral_rate = neutral_esc / max(1, len(neutral_rows)) * 100
+
+        alm = [r for r in alm_all if r["model"] != "gpt-4o-mini"]
 
         emotions = ["fear", "guilt", "anger", "sadness"]
         intensities = ["strong", "subtle"]
@@ -424,13 +429,13 @@ def fig5_discrimination() -> None:
 def fig6_opus_reversal() -> None:
     try:
         data = [
-            # (display_name, single_pct, multi_pct)
-            ("Claude Opus",    2,   100),
-            ("Claude Haiku",  53,    95),
-            ("Claude Sonnet", 12,    88),
-            ("Gemini",         0,     0),
-            ("GPT-4o-mini",    0,     0),
+            # (display_name, single_pct, multi_pct)  — bottom to top
             ("Llama",          0,     0),
+            ("GPT-4o-mini",    0,     0),
+            ("Gemini",         0,     0),
+            ("Claude Sonnet", 12,    88),
+            ("Claude Haiku",  53,    95),
+            ("Claude Opus",    2,   100),
         ]
 
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -444,11 +449,10 @@ def fig6_opus_reversal() -> None:
             ax.scatter([multi], [i], s=110,
                        facecolors=color, edgecolors=color, zorder=2)
 
-        # annotate Opus (index 0 from bottom — but we want it from top so reverse)
-        opus_idx = len(data) - 1  # Opus is first in list, displayed at top if reversed
-        # data is drawn with i=0 at bottom; Opus is i=0, so bottom row
+        # Opus is now at the top (highest index = len-1)
+        opus_idx = len(data) - 1
         ax.annotate("2% → 100%\nPatient accumulation of evidence",
-                    xy=(100, 0), xytext=(60, 0.9),
+                    xy=(100, opus_idx), xytext=(55, opus_idx - 0.9),
                     fontsize=9, color=C["escalate"], fontweight="bold",
                     arrowprops=dict(arrowstyle="->", color=C["escalate"], lw=1.2))
 
@@ -515,13 +519,13 @@ def fig7_theory_of_change() -> None:
              "Verify + escalate instruction · Cost: under $1 to test"),
         ]
 
-        fig, ax = plt.subplots(figsize=(9, 13))
+        fig, ax = plt.subplots(figsize=(9, 12))
         fig.patch.set_facecolor("white")
         ax.set_xlim(0, 10)
-        ax.set_ylim(0, 15)
+        ax.set_ylim(0, 13)
         ax.axis("off")
         ax.set_title("From Vulnerability to Fix — The Full Chain",
-                     fontsize=16, fontweight="bold", pad=14)
+                     fontsize=16, fontweight="bold", pad=8)
 
         n_boxes = len(box_defs)
         box_h = 1.7
@@ -529,7 +533,7 @@ def fig7_theory_of_change() -> None:
         box_x = (10 - box_w) / 2
         gap = 0.7  # gap between boxes
         total = n_boxes * box_h + (n_boxes - 1) * gap
-        start_y = (15 - total) / 2
+        start_y = (13 - total) / 2
 
         box_bottoms = []
         for i, (color, title_line, *body_lines) in enumerate(box_defs):
