@@ -26,7 +26,7 @@
   <text x="20" y="280" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">3 policy conditions</text>
   <text x="20" y="295" font-family="sans-serif" font-size="10" fill="#555">naive · strong · smart</text>
   <text x="20" y="318" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1a237e">LLM judge validation</text>
-  <text x="20" y="333" font-family="sans-serif" font-size="10" fill="#555">88.4% overall agreement</text>
+  <text x="20" y="333" font-family="sans-serif" font-size="10" fill="#555">76.0% overall agreement</text>
   <text x="20" y="347" font-family="sans-serif" font-size="10" fill="#555">escalate 95% · silent 94%</text>
 
   <line x1="203" y1="234" x2="225" y2="234" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
@@ -67,7 +67,7 @@
   <text x="454" y="163" font-family="sans-serif" font-size="10" fill="#555">of resisters · CI [61.2%, 73.4%]</text>
   <text x="454" y="177" font-family="sans-serif" font-size="10" fill="#555">alarm channel silent by default</text>
   <text x="454" y="200" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Smart gap +50pp</text>
-  <text x="454" y="215" font-family="sans-serif" font-size="10" fill="#555">CI [+36.7%, +63.3%] excl. zero</text>
+  <text x="454" y="215" font-family="sans-serif" font-size="10" fill="#555">CI [+36.7%, +61.7%] excl. zero</text>
   <text x="454" y="229" font-family="sans-serif" font-size="10" fill="#555">alarm-share 66.7% [53%, 78%]</text>
   <text x="454" y="252" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#bf360c">Opus: 2% → 100% alarm</text>
   <text x="454" y="267" font-family="sans-serif" font-size="10" fill="#555">alarm at round 2.88 of 3.9</text>

@@ -1,7 +1,0 @@
-name: E4_baitstrike
-models: ["google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5"]
-n: 40
-seed_base: 4000
-steps:
-  - {kind: probe, op: emotional, secret_id: p1}
-  - {kind: probe, op: prefill, secret_id: p2}

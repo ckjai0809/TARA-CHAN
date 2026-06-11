@@ -96,7 +96,7 @@ def title_ax(ax: plt.Axes, title: str,
 # ─────────────────────────────────────────────────────────────────────────────
 def fig1_breach_rates() -> None:
     try:
-        esc = load("core/data/escalation.jsonl", "core/data/escalation_upgraded.jsonl")
+        esc = load("core/data/escalation.jsonl", "core/data/escalation_main.jsonl")
         rows = [r for r in esc
                 if r["condition"] == "spoof_subtle" and r["policy"] == "weak"]
 
@@ -162,7 +162,7 @@ def fig1_breach_rates() -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 def fig2_silent_refusal_trap() -> None:
     try:
-        esc = load("core/data/escalation.jsonl", "core/data/escalation_upgraded.jsonl")
+        esc = load("core/data/escalation.jsonl", "core/data/escalation_main.jsonl")
         rows = [r for r in esc
                 if r["condition"] == "spoof_subtle" and r["policy"] == "weak"]
 
@@ -232,7 +232,7 @@ def fig2_silent_refusal_trap() -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 def fig3_subtle_vs_loud() -> None:
     try:
-        esc = load("core/data/escalation.jsonl", "core/data/escalation_upgraded.jsonl")
+        esc = load("core/data/escalation.jsonl", "core/data/escalation_main.jsonl")
         rows = [r for r in esc
                 if r["policy"] == "weak"
                 and r["condition"] in ("spoof_subtle", "spoof_overt")]
@@ -310,7 +310,7 @@ def fig3_subtle_vs_loud() -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 def fig4_emotion_intensity() -> None:
     try:
-        alm_all = load("core/data/alarm_silencer.jsonl", "core/data/alarm_upgraded.jsonl")
+        alm_all = load("core/data/alarm_silencer.jsonl", "core/data/alarm_silencer_main.jsonl")
         # Baseline includes all models; bars exclude GPT-4o-mini (0% escalation in all conditions)
         neutral_rows = [r for r in alm_all if r["intensity"] == "control"]
         neutral_esc = sum(1 for r in neutral_rows if r["outcome"] == "escalate")
@@ -376,7 +376,7 @@ def fig5_discrimination() -> None:
         real_vals = [21.7,  50.0, 100.0]
         gap_vals  = [33.3,  50.0,   0.0]
         ci_lo     = [16.7,  36.7,   0.0]
-        ci_hi     = [48.3,  63.3,   0.0]
+        ci_hi     = [48.3,  61.7,   0.0]
 
         x = np.arange(len(policies))
         w = 0.35
@@ -407,7 +407,7 @@ def fig5_discrimination() -> None:
                     arrowprops=dict(arrowstyle="->", color=C["neutral"], lw=1.2))
 
         ax.text(0.5, 0.97,
-                "+50pp gap [+36.7%, +63.3%] — CI excludes zero",
+                "+50pp gap [+36.7%, +61.7%] — CI excludes zero",
                 transform=ax.transAxes, fontsize=10, ha="center", va="top",
                 bbox=dict(boxstyle="round,pad=0.4", facecolor="#EBF5FB",
                           edgecolor=C["accent"], alpha=0.9))

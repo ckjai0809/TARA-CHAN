@@ -1,6 +1,6 @@
 """Haiku false-positive alarm analysis.
 Haiku alarms on 28% of benign requests — is this scenario-specific or uniform?
-Source: core/data/escalation.jsonl + upgraded_version/core/data/escalation_upgraded.jsonl
+Source: core/data/escalation.jsonl + core/data/escalation_main.jsonl
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ def rate(rows, outcome):
 
 def main():
     orig = list(read_jsonl(ROOT / "core/data/escalation.jsonl"))
-    upgr = list(read_jsonl(ROOT / "core/data/escalation_upgraded.jsonl"))
+    upgr = list(read_jsonl(ROOT / "core/data/escalation_main.jsonl"))
 
     haiku_orig = [r for r in orig if "haiku" in r.get("model", "")]
     haiku_upgr = [r for r in upgr if "haiku" in r.get("model", "")]

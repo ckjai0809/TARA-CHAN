@@ -1,5 +1,5 @@
 """Tighten Haiku defend CI: 30 additional reps on the key cell
-(weak policy + channel arm + spoof_subtle). Appends to core/data/haiku_ci_extra.jsonl.
+(weak policy + channel arm + spoof_subtle). Appends to core/data/escalation_haiku_extra.jsonl.
 Current CI: [41,65]. Target: tighten to ~±8pp.
 Budget cap: $1
 """
@@ -21,7 +21,7 @@ from harness.escalation import build_target_system, build_attack, classify_respo
 from harness.jsonlio import append_jsonl
 from harness.openrouter import OpenRouterClient
 
-OUT = ROOT / "core" / "data" / "haiku_ci_extra.jsonl"
+OUT = ROOT / "core" / "data" / "escalation_haiku_extra.jsonl"
 MODEL = "anthropic/claude-haiku-4.5"
 EXTRA_REPS = 30  # per scenario → 120 extra decisions total
 _LOCK = Lock()

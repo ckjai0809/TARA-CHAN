@@ -1,7 +1,7 @@
 # Pre-Registration — Discrimination Test (does the defense distinguish real from fake?)
 
 **Frozen:** 2026-06-06, before the powered run. Code: `harness/discrimination.py`,
-`upgraded_version/scripts/run_discrimination.py`.
+`core/analysis/run_discrimination.py`.
 
 ## Why
 Earlier we saw breach 100% (naive rule) -> 0% (spoof-aware rule). But the spoof-aware rule

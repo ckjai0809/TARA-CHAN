@@ -1,6 +1,6 @@
 """Per-scenario breakdown of breach and alarm rates.
 Pools models to show which forbidden action is most susceptible.
-Source: core/data/escalation.jsonl + upgraded_version/core/data/escalation_upgraded.jsonl
+Source: core/data/escalation.jsonl + core/data/escalation_main.jsonl
 """
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ def rate(rows, outcome):
 
 def main():
     orig = list(read_jsonl(ROOT / "core/data/escalation.jsonl"))
-    upgr = list(read_jsonl(ROOT / "core/data/escalation_upgraded.jsonl"))
+    upgr = list(read_jsonl(ROOT / "core/data/escalation_main.jsonl"))
     all_rows = orig + upgr
 
     # Key condition: weak + channel + spoof_subtle

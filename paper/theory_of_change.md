@@ -9,17 +9,17 @@
 ║     INPUTS       ║     ║   ACTIVITIES     ║     ║    OUTPUTS       ║     ║    OUTCOMES      ║     ║      GOAL        ║
 ╠══════════════════╣     ╠══════════════════╣     ╠══════════════════╣     ╠══════════════════╣     ╠══════════════════╣
 ║                  ║     ║                  ║     ║                  ║     ║                  ║     ║                  ║
-║ Payload-free     ║     ║ Breach + alarm   ║     ║ Breach 69.4%     ║     ║ Silent-refusal   ║     ║ Human oversight  ║
-║ precondition     ║     ║ measurement      ║     ║ [65.4%, 73.2%]   ║     ║ trap = POLICY    ║     ║ loop restored    ║
+║ Payload-free     ║     ║ Breach + alarm   ║     ║ Breach 71.5%     ║     ║ Silent-refusal   ║     ║ Human oversight  ║
+║ precondition     ║     ║ measurement      ║     ║ [68.3%, 74.6%]   ║     ║ trap = POLICY    ║     ║ loop restored    ║
 ║ spoof            ║     ║ (comply /        ║     ║ 6/9 models 100%  ║     ║ DESIGN FAILURE,  ║     ║ in deployed      ║
 ║ (overt + subtle) ║     ║  silent_refuse / ║     ║                  ║     ║ not model limit  ║     ║ agentic systems  ║
 ║                  ║     ║  escalate)       ║     ║ Silent-refusal   ║     ║                  ║     ║                  ║
-║ 9 frontier       ║─────║                  ║─────║ 75.8% of         ║─────║ Smart policy =   ║─────║ Agent:           ║
+║ 9 frontier       ║─────║                  ║─────║ 67.6% of         ║─────║ Smart policy =   ║─────║ Agent:           ║
 ║ models           ║     ║ Discrimination   ║     ║ resisters        ║     ║ deployable fix   ║     ║  ✓ blocks attack  ║
-║ (Claude × 3,     ║     ║ test             ║     ║ [68.7%, 81.7%]   ║     ║ (one prompt      ║     ║  ✓ raises alarm   ║
+║ (Claude × 3,     ║     ║ test             ║     ║ [61.2%, 73.4%]   ║     ║ (one prompt      ║     ║  ✓ raises alarm   ║
 ║  GPT, Gemini,    ║     ║ (genuine vs      ║     ║                  ║     ║  edit):          ║     ║  ✓ discriminates  ║
 ║  Llama × 2,      ║     ║  spoof,          ║     ║ Smart gap +50pp  ║     ║  – stops breach  ║     ║    real vs fake   ║
-║  Mistral, Qwen,  ║     ║  hold-fake minus ║     ║ [+36.7%, +63.3%] ║     ║  – alarm active  ║     ║                  ║
+║  Mistral, Qwen,  ║     ║  hold-fake minus ║     ║ [+36.7%, +61.7%] ║     ║  – alarm active  ║     ║                  ║
 ║  DeepSeek-R1)    ║     ║  hold-real)      ║     ║ alarm-share 66.7%║     ║  – non-circular  ║     ║ $0.82 / 600 calls ║
 ║                  ║     ║                  ║     ║                  ║     ║                  ║     ║ no retraining    ║
 ║ 4 scenarios:     ║     ║ Persistence test ║     ║ Opus: 2% → 100%  ║     ║ Single-turn eval ║     ║ needed           ║
@@ -41,4 +41,4 @@
 
 ---
 
-**One-line read:** A payload-free lie causes 69.4% breach (spoof_subtle, naive policy) across 9 models; defending models mostly go silent (75.8% of resisters); a single smart policy edit produces non-circular discrimination (+50pp) and active alarms (66.7%) — demonstrating the silent-refusal trap is a policy design failure with a deployable fix.
+**One-line read:** A payload-free lie causes 71.5% breach (spoof_subtle, naive policy) across 9 models; defending models mostly go silent (67.6% of resisters); a single smart policy edit produces non-circular discrimination (+50pp) and active alarms (66.7%) — demonstrating the silent-refusal trap is a policy design failure with a deployable fix.

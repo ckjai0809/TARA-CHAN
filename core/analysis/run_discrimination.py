@@ -2,7 +2,7 @@
 across naive / strict / smart policies, 9 models. Measures whether a defense
 DISCRIMINATES true from fake or just refuses everything. Budget-capped.
 
-Writes upgraded_version/core/data/discrimination.jsonl.
+Writes core/data/discrimination.jsonl.
 """
 from __future__ import annotations
 

@@ -1,8 +1,0 @@
-name: E6_marathi
-models: ["google/gemini-3-flash-preview", "anthropic/claude-haiku-4.5"]
-n: 30
-seed_base: 6000
-steps:
-  - {kind: probe, op: emotional, secret_id: p2, lang: en}
-  - {kind: probe, op: emotional, secret_id: p3, lang: mr}
-  - {kind: probe, op: prefill, secret_id: p4, lang: mr}

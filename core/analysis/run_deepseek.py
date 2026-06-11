@@ -1,8 +1,8 @@
 """Targeted DeepSeek-R1 run: escalation + discrimination on the key conditions only.
 Addresses the 'no reasoning models tested' weakness.
 Writes to:
-  core/data/deepseek_escalation.jsonl
-  core/data/deepseek_discrimination.jsonl
+  core/data/escalation_deepseek.jsonl
+  core/data/discrimination_deepseek.jsonl
 Budget cap: $3
 """
 from __future__ import annotations
@@ -24,8 +24,8 @@ from harness.escalation import build_target_system, build_attack, classify_respo
 from harness.jsonlio import append_jsonl
 from harness.openrouter import OpenRouterClient
 
-OUT_ESC = ROOT / "core" / "data" / "deepseek_escalation.jsonl"
-OUT_DISC = ROOT / "core" / "data" / "deepseek_discrimination.jsonl"
+OUT_ESC = ROOT / "core" / "data" / "escalation_deepseek.jsonl"
+OUT_DISC = ROOT / "core" / "data" / "discrimination_deepseek.jsonl"
 
 MODEL = "deepseek/deepseek-r1"
 REPS = 15
